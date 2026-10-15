@@ -54,6 +54,6 @@ use("cohort_86_lesson_06");
 //   {
 //     $group: {
 //       _id: "$job",
-//       numberEmployees: { $sum: 1}}
+//       averageNumberEmployees: { $avg: "$age"}}
 //   }
 // ]).sort({numberEmployees: -1})
