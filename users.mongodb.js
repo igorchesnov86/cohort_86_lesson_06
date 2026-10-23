@@ -14,8 +14,12 @@ use("cohort_86_lesson_06");
 
 //1.Найдите всех пользователей, у которых профессия (job) — "Developer", 
 // и выведите только их имена (firstName) и увлечения (hobby).
+// db.users.find(
+//   {job: "Designer"},
+//   {firstName: 1, hobby: 1}
+// );
 db.users.find(
-  {job: "Director", age: {$gte:30}},
+  {job: {$in: ["Director","Designer"]}, age: {$lte:30}},
   {firstName: 1, hobby: 1}
 );
 
