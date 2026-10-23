@@ -18,6 +18,10 @@ use("cohort_86_lesson_06");
 //   {job: "Designer"},
 //   {firstName: 1, hobby: 1}
 // );
+db.users.find(
+  {job: {$in: ["Director","Designer"]}, age: {$lte:30}},
+  {firstName: 1, hobby: 1}
+);
 
 //2. Найдите всех пользователей, которые увлекаются либо "Football", либо "Dancing",
 // и при этом их возраст (age) строго больше 21 года.
